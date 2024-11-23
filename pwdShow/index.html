@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: blueviolet;
+        }
+        input{
+          
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20%;
+            border:0;
+            outline:0;
+            color:#555;
+            margin-left:45%
+        }
+        .inputBox{
+            text-align: center;
+            display: flex;
+            align-items: center;
+            max-width: 300;
+
+        }
+        .inputBox img{
+            width: 40px;
+            position: absolute;
+            left: 53%;
+            margin-top: 378px;
+        }
+    </style>
+</head>
+<body>
+    <div class="inputBox">
+        <input type="password" placeholder="Enter Passward here" id="password">
+        <img src="hide.png" alt="" id="eyeIcon"> 
+    </div>
+
+    <script>
+       var password = document.getElementById("password");
+       var eyeIcon = document.getElementById("eyeIcon");
+       var img= "show.png";
+
+       eyeIcon.addEventListener("click",function(){
+        if(password.type=="password"){
+            password.type ="text";
+            eyeIcon.src="show.png";
+
+        }else{
+            password.type="password";
+            eyeIcon.src="hide.png";
+
+
+        }
+       })
+
+     
+    </script>
+</body>
+</html>
